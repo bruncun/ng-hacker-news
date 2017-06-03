@@ -6,7 +6,6 @@ angular
     "ngRoute",
     "ngSanitize",
     "hackerNews.topStories",
-    "hackerNews.view2",
     "hackerNews.version"
   ])
   .config([
