@@ -10,12 +10,20 @@ angular
       templateUrl: "components/story/story.html",
       controller: function($scope, TopStoriesService) {
         var vm = this;
+        vm.loading = true;
 
-        TopStoriesService.getStory($scope.id).then(function(res) {
-          vm.story = res.data;
-        });
+        activate();
+
+        function activate() {
+          TopStoriesService.getStory($scope.id).then(function(res) {
+            vm.story = res.data;
+            vm.title = vm.story.title;
+            vm.url = vm.story.url;
+            vm.loading = false;
+          });
+        }
       },
-      controllerAs: "story",
+      controllerAs: "vm",
       link: function(scope, elem, attrs, ctrl) {}
     };
   });

@@ -1,3 +1,7 @@
-<ul ng-repeat="story in vm.stories">
-  <story id="story"></story>
-</ul>
+<h1>Top Stories</h1>
+<p ng-if="vm.loading">Loading...</p>
+<ol ng-if="!vm.loading">
+  <li ng-repeat="story in vm.stories track by story">
+    <story id="story"></story>
+  </li>
+</ol>

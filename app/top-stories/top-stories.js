@@ -16,12 +16,14 @@ angular
     function(TopStoriesService) {
       var vm = this;
       vm.stories = [];
+      vm.loading = true;
 
       activate();
 
       function activate() {
         TopStoriesService.getStories().then(function(res) {
-          vm.stories = res.data;
+          vm.loading = false;
+          vm.stories = res.data.slice(0, 30);
         });
       }
     }

@@ -1,1 +1,4 @@
-<span>foo</span>
+<div>
+  <span ng-if="vm.loading">...</span>
+  <a ng-if="!vm.loading" href="{{vm.url}}">{{vm.title}}</a>
+</div>
