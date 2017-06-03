@@ -7,13 +7,13 @@ angular
     function($routeProvider) {
       $routeProvider.when("/", {
         templateUrl: "top-stories/top-stories.html",
-        controller: "TopStoriesCtrl"
+        controller: "TopStoriesCtrl as topStoriesCtrl"
       });
     }
   ])
   .controller("TopStoriesCtrl", [
     "$scope",
     function($scope) {
-      $scope.foo = "baz";
+      this.foo = "baz";
     }
   ]);
