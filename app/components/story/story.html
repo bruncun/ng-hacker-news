@@ -11,7 +11,12 @@
                            '1': '1 point',
                            'other': '{} points'}">
       </ng-pluralize>
-      <span>by {{vm.author}} {{vm.time}}</span>
+      <span>by {{vm.author}} {{vm.time}} |</span>
+      <ng-pluralize count="vm.numComments"
+                    when="{'0': 'discuss',
+                           '1': '1 comment',
+                           'other': '{} comments'}">
+      </ng-pluralize>
     </small>
   </div>
 </div>
