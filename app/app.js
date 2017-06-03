@@ -6,7 +6,7 @@ angular
     "ngRoute",
     "ngSanitize",
     "hackerNews.topStories",
-    "hackerNews.version"
+    "hackerNews.story"
   ])
   .config([
     "$locationProvider",
