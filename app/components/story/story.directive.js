@@ -24,6 +24,7 @@ angular
             }
             vm.domain = getDomainFromUrl(vm.url);
             vm.score = vm.story.score;
+            vm.author = vm.story.by;
             vm.loading = false;
           });
         }
