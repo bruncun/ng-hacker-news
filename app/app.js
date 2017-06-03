@@ -5,7 +5,7 @@ angular
   .module("myApp", [
     "ngRoute",
     "ngSanitize",
-    "myApp.view1",
+    "myApp.topStories",
     "myApp.view2",
     "myApp.version"
   ])
@@ -15,6 +15,6 @@ angular
     function($locationProvider, $routeProvider) {
       $locationProvider.hashPrefix("!");
 
-      $routeProvider.otherwise({ redirectTo: "/view1" });
+      $routeProvider.otherwise({ redirectTo: "/" });
     }
   ]);
