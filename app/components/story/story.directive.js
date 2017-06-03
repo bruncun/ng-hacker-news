@@ -19,8 +19,22 @@ angular
             vm.story = res.data;
             vm.title = vm.story.title;
             vm.url = vm.story.url;
+            if (!vm.url) {
+              vm.url = "https://news.ycombinator.com/item?id=" + vm.story.id;
+            }
+            vm.domain = getDomainFromUrl(vm.url);
             vm.loading = false;
           });
+        }
+
+        function getDomainFromUrl(url) {
+          var a = document.createElement("a");
+          a.setAttribute("href", url);
+          if (a.hostname === "news.ycombinator.com") {
+            return "";
+          } else {
+            return "(" + a.hostname + ")";
+          }
         }
       },
       controllerAs: "vm",
