@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-  .module("myApp.topStories", ["ngRoute"])
+  .module("hackerNews.topStories", ["ngRoute"])
   .config([
     "$routeProvider",
     function($routeProvider) {

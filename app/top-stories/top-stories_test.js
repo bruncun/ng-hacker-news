@@ -1,7 +1,7 @@
 "use strict";
 
-describe("myApp.topStories module", function() {
-  beforeEach(module("myApp.topStories"));
+describe("hackerNews.topStories module", function() {
+  beforeEach(module("hackerNews.topStories"));
 
   describe("topStories controller", function() {
     it(

@@ -2,12 +2,12 @@
 
 // Declare app level module which depends on views, and components
 angular
-  .module("myApp", [
+  .module("hackerNews", [
     "ngRoute",
     "ngSanitize",
-    "myApp.topStories",
-    "myApp.view2",
-    "myApp.version"
+    "hackerNews.topStories",
+    "hackerNews.view2",
+    "hackerNews.version"
   ])
   .config([
     "$locationProvider",
