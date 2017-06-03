@@ -23,6 +23,7 @@ angular
               vm.url = "https://news.ycombinator.com/item?id=" + vm.story.id;
             }
             vm.domain = getDomainFromUrl(vm.url);
+            vm.score = vm.story.score;
             vm.loading = false;
           });
         }
