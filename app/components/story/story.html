@@ -9,11 +9,9 @@
       <ng-pluralize count="vm.score"
                     when="{'0': '0 points',
                            '1': '1 point',
-                           '2': '2 points',
-                           'other': '{} points'
-                         }">
+                           'other': '{} points'}">
       </ng-pluralize>
-      <span>by {{vm.author}}</span>
+      <span>by {{vm.author}} {{vm.time}}</span>
     </small>
   </div>
 </div>
