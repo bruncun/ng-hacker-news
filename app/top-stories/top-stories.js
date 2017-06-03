@@ -7,13 +7,22 @@ angular
     function($routeProvider) {
       $routeProvider.when("/", {
         templateUrl: "top-stories/top-stories.html",
-        controller: "TopStoriesCtrl as topStoriesCtrl"
+        controller: "TopStoriesCtrl as vm"
       });
     }
   ])
   .controller("TopStoriesCtrl", [
-    "$scope",
-    function($scope) {
-      this.foo = "baz";
+    "TopStoriesService",
+    function(TopStoriesService) {
+      var vm = this;
+      vm.stories = [];
+
+      activate();
+
+      function activate() {
+        TopStoriesService.getStories().then(function(res) {
+          vm.stories = res.data;
+        });
+      }
     }
   ]);
