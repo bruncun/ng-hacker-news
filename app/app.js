@@ -5,6 +5,7 @@ angular
   .module("hackerNews", [
     "ngRoute",
     "ngSanitize",
+    "angularUtils.directives.dirPagination",
     "hackerNews.topStories",
     "hackerNews.story"
   ])
