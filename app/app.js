@@ -7,16 +7,14 @@ angular
     "ngSanitize",
     "angularUtils.directives.dirPagination",
     "hackerNews.topStories",
-    "hackerNews.story"
+    "hackerNews.story",
+    "hackerNews.storyComments"
   ])
   .config([
     "$locationProvider",
     "$routeProvider",
     function($locationProvider, $routeProvider) {
-      $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-      });
+      $locationProvider.hashPrefix("!");
 
       $routeProvider.otherwise({ redirectTo: "/" });
     }
