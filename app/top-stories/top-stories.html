@@ -1,8 +1,9 @@
 <div ng-cloak>
   <h3>Top Stories</h3>
-  <ol ng-if="!vm.loading">
-    <li ng-repeat="story in vm.stories track by story">
+  <ol ng-if="!vm.loading" start="{{vm.start}}">
+    <li dir-paginate="story in vm.stories | itemsPerPage: 30" current-page="vm.currentPage">
       <story id="story"></story>
     </li>
   </ol>
+  <dir-pagination-controls on-page-change="vm.updatePage(newPageNumber, oldPageNumber)"></dir-pagination-controls>
 </div>

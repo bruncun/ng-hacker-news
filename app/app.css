@@ -6,4 +6,19 @@ ol { list-style: decimal; }
   font-weight: 700;
  }
 
+.pagination {
+  list-style: none;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 2.0rem;
+}
+
+.pagination li:last-child { margin-right: 0; }
+
+.story {
+  display: inline-block;
+}
+
 .story-title { display: inline-block; }
