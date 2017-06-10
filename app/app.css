@@ -1,14 +1,14 @@
 ol { list-style: decimal; }
 
+ul ul { font-size: 100%; }
+
 .navbar-brand {
   display: inline-block;
   margin-bottom: 3.0rem;
   font-weight: 700;
  }
 
-.pagination {
-  list-style: none;
-}
+.pagination { list-style: none; }
 
 .pagination li {
   display: inline-block;
@@ -17,16 +17,12 @@ ol { list-style: decimal; }
 
 .pagination li:last-child { margin-right: 0; }
 
-.story {
-  display: inline-block;
-}
+.story { display: inline-block; }
 
 .story-title { display: inline-block; }
 
-.comments-title {
-  margin-top: 1.0rem;
-}
+.comments-title { margin-top: 1.0rem; }
 
-.comments-list {
-  list-style-type: none;
-}
+.comments-list { list-style-type: none; }
+
+.text-muted { color: #999; }

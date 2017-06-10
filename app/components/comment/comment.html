@@ -1,7 +1,10 @@
 <li>
   <span ng-if="vm.loading">...</span>
   <div ng-if="!vm.loading">
-    <small>{{ vm.commentAuthor }} {{ vm.commentTime }}</small>
+    <small class="text-muted">{{ vm.commentAuthor }} {{ vm.commentTime }}</small>
     <p ng-bind-html="vm.commentText"></p>
+    <ul class="comments-list">
+      <comment id="kidId" ng-repeat="kidId in vm.kids"></comment>
+    </ul>
   </div>
 </li>

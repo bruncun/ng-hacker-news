@@ -18,7 +18,8 @@ angular
           TopStoriesService.getStory($scope.id).then(function(res) {
             vm.commentText = res.data.text;
             vm.commentAuthor = res.data.by;
-            vm.commentTime = res.data.time;
+            vm.kids = res.data.kids;
+            vm.commentTime = $filter("getHoursAgo")(res.data.time);
             vm.loading = false;
           });
         }
