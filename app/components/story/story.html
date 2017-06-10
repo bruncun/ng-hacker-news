@@ -1,10 +1,10 @@
 <div>
-  <span ng-if="vm.loading">...</span>
-  <div class="story-title">
+  <span ng-if-start="vm.loading">...</span>
+  <div class="story-title" ng-if="!vm.loading">
     <a href="{{vm.url}}">{{vm.title}}</a>
     <em>{{vm.domain}}</em>
   </div>
-  <div>
+  <div ng-if-end="!vm.loading">
     <small>
       <ng-pluralize count="vm.score"
                     when="{'0': '0 points',
@@ -12,11 +12,13 @@
                            'other': '{} points'}">
       </ng-pluralize>
       <span>by {{vm.author}} {{vm.time}} |</span>
-      <ng-pluralize count="vm.numComments"
-                    when="{'0': 'discuss',
-                           '1': '1 comment',
-                           'other': '{} comments'}">
-      </ng-pluralize>
+      <a ng-href="#!/post/{{id}}">
+        <ng-pluralize count="vm.numComments"
+                      when="{'0': 'discuss',
+                             '1': '1 comment',
+                             'other': '{} comments'}">
+        </ng-pluralize>
+      </a>
     </small>
   </div>
 </div>
