@@ -13,8 +13,22 @@ angular
   ])
   .controller("StoryCommentsCtrl", [
     "$routeParams",
+    "TopStoriesService",
     function($routeParams, TopStoriesService) {
       var vm = this;
-      vm.id = $routeParams.id;
+      vm.id;
+      vm.story;
+      vm.kids;
+
+      activate();
+
+      function activate() {
+        vm.id = $routeParams.id;
+
+        TopStoriesService.getStory(vm.id).then(function(res) {
+          vm.story = res.data;
+          vm.kids = res.data.kids;
+        });
+      }
     }
   ]);

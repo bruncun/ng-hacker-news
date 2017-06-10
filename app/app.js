@@ -8,7 +8,8 @@ angular
     "angularUtils.directives.dirPagination",
     "hackerNews.topStories",
     "hackerNews.story",
-    "hackerNews.storyComments"
+    "hackerNews.storyComments",
+    "hackerNews.comment"
   ])
   .config([
     "$locationProvider",

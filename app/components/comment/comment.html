@@ -1,0 +1,7 @@
+<li>
+  <span ng-if="vm.loading">...</span>
+  <div ng-if="!vm.loading">
+    <small>{{ vm.commentAuthor }} {{ vm.commentTime }}</small>
+    <p ng-bind-html="vm.commentText"></p>
+  </div>
+</li>

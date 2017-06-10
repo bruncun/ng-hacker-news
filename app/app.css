@@ -22,3 +22,11 @@ ol { list-style: decimal; }
 }
 
 .story-title { display: inline-block; }
+
+.comments-title {
+  margin-top: 1.0rem;
+}
+
+.comments-list {
+  list-style-type: none;
+}

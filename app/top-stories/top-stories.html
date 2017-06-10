@@ -1,5 +1,5 @@
 <div ng-cloak>
-  <h3>Top Stories</h3>
+  <h4>Top Stories</h4>
   <ol ng-if="!vm.loading" start="{{vm.start}}">
     <li dir-paginate="story in vm.stories | itemsPerPage: 30" current-page="vm.currentPage">
       <story id="story"></story>
