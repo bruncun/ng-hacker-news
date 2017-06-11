@@ -23,28 +23,6 @@ angular
             vm.loading = false;
           });
         }
-
-        function getDomainFromUrl(url) {
-          var a = document.createElement("a");
-          a.setAttribute("href", url);
-          if (a.hostname === "news.ycombinator.com") {
-            return "";
-          } else {
-            return "(" + a.hostname + ")";
-          }
-        }
-
-        function getHoursAgo(seconds) {
-          var secondDifference = Date.now() / 1000 - seconds;
-
-          if (secondDifference < 3600) {
-            var minutesAgo = secondDifference / 60;
-            return Math.floor(minutesAgo) + " minutes ago";
-          } else {
-            var hoursAgo = secondDifference / 3600;
-            return Math.floor(hoursAgo) + " hours ago";
-          }
-        }
       },
       controllerAs: "vm",
       link: function(scope, elem, attrs, ctrl) {}
