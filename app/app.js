@@ -19,4 +19,10 @@ angular
 
       $routeProvider.otherwise({ redirectTo: "/" });
     }
+  ])
+  .config([
+    "$compileProvider",
+    function($compileProvider) {
+      $compileProvider.debugInfoEnabled(false);
+    }
   ]);
